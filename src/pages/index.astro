@@ -1,0 +1,23 @@
+---
+import VueComponent from '../components/VueComponent.vue'
+import cat from '../assets/cat.jpg'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+    <!-- astro component -->
+    <img src={cat} alt="astro cat" />
+
+    <!-- static vue component (no JS so inlines the HTML) -->
+    <VueComponent />
+
+    <!-- dynamic vue component -->
+    <VueComponent client:load />
+	</body>
+</html>
